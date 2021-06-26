@@ -23,28 +23,28 @@ function App() {
   return (
    //Horizantal Nav_bar
    <BrowserRouter>
-   <div className="bg-secondary p-4">
+   <div className=" p-4">
     {/* <p>How are you</p> */}
-     <ul className="nav bg-light justify-content-end">
+     <ul className="nav bg-secondary  justify-content-end">
        <li className="nav-item">
-         <Link className="nav-link" to="/home">Home</Link>
+         <Link className="nav-link text-white" to="/home">Home</Link>
        </li>
       
        <li className="nav-item">
-         <Link className="nav-link" to="/test">Test</Link>
+         <Link className="nav-link text-white" to="/test">Test</Link>
        </li>
        
        <li className="nav-item">
-         <Link className="nav-link" to="/register">Register</Link>
+         <Link className="nav-link text-white" to="/register">Register</Link>
        </li>
 
        {! userLoginState ?
 
        <li className="nav-item">
-         <Link className="nav-link" to="/login">Login</Link>
+         <Link className="nav-link text-white" to="/login">Login</Link>
        </li> :
        <li className="nav-item">
-         <Link className="nav-link" to="/login" onClick={() => onLogout()}>Logout</Link>
+         <Link className="nav-link text-white" to="/login" onClick={() => onLogout()}>Logout</Link>
        </li>
        
         }

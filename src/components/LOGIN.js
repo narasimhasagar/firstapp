@@ -23,7 +23,7 @@ export default function Login(props){
                localStorage.setItem("user",JSON.stringify( responseObj.userobj))
                localStorage.setItem("username",responseObj.username)
                
-
+ 
               //update state
                props. setUserStatus(true)
 
@@ -75,7 +75,7 @@ export default function Login(props){
             {/*password validation */}
             {errors.password && <p className="text-danger">*Password is required</p>}
 
-
+ 
             <button type="submit" className="btn btn-warning">Login</button>
         </form>
     )

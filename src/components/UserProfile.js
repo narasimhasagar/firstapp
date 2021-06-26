@@ -1,34 +1,22 @@
 import axios from 'axios';
 import  { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 import {useHistory} from 'react-router-dom'
 import ViewProducts from './ViewProducts';
 import UserCart from './UserCart';
 import {BrowserRouter,Link,Switch,Route} from 'react-router-dom'
 
 
+
  
-export default function UserProfile(){
+export default function UserProfile(){  
 
-    //function to add post product to usercart api
-    // const addProductToCart=()=>{
-    //     //get username from Local storage
-    //     let username=localStorage.getItem("username")
-    //     // add username to product object
-    //     let newObj={username,productObj}
 
-    //     console.log("product added by user",newObj)
-    //     //make post request
-    //     axios.post("/user/addtocart",newObj)
-    //          .then(res =>{
-    //              let responseObj = res.data
-    //              alert(responseObj.message)
-    //          })
-    //          .catch(err =>{
-    //              console.log("err in adding to cart",err)
-    //              alert("something went wrong")
-    //          })
-    // }
+    //const getCount=0;
+
+
+
+    
 
     let params=useParams();
     let [userObj,setUserObj]=useState({})
@@ -66,7 +54,10 @@ export default function UserProfile(){
                         <Link className="nav-link text-white" to="/products">Products</Link>
                     </button>
                     <button type="submit" className="btn btn-info ms-5 mt-3">
-                        <Link className="nav-link text-dark " to="/usercart">UserCart</Link>
+                        <Link className="nav-link text-dark " to="/usercart">
+                            Cart
+                            <span className="badge bg-warning taxt-dark">{0}</span>
+                            </Link>
                     </button>
                  </div>
 
@@ -77,6 +68,11 @@ export default function UserProfile(){
                     <Route path="/usercart">
                         <UserCart/>
                     </Route>
+                    <Route path="/">
+                        <Redirect to ="/products" />
+                    </Route>
+                
+                    
                 </Switch>
             </BrowserRouter>
 

@@ -5,7 +5,12 @@ import {useState,useEffect} from'react'
 function UserCart(){
 
     const [cartObj,setCartObj]=useState('')
+    // let status;
+    // if (cartObj===''){
+    //     status=false;
 
+    // }
+ 
     useEffect(()=>{
         let username=localStorage.getItem("username")
 
@@ -18,32 +23,33 @@ function UserCart(){
             alert("Something went wrong in getting cart")
         })
     },[])
-
+ 
 
 
     return(
         <div>
-            <table className="table table-bordered text-center w-75 mx-auto mt-5">
-                <thead>
-                    <th>ProductName</th>
-                    <th>Brand</th>
-                    <th>Image</th> 
-                </thead>
-                <tbody>
-                    {cartObj &&
-                        cartObj.products.map((product,index)=>{
-                            return <tr>
-                                <td>{product.productname}</td>
-                                <td>{product.Brand}</td>
-                                <td>
-                                    <img src={product.profileImage} width="60px" alt=""/> 
-                                </td>
-                            </tr>
-                        })
-                    }
-                </tbody>
-            </table>
            
+                <table className="table table-bordered text-center w-75 mx-auto mt-5">
+                    <thead>
+                        <th>ProductName</th>
+                        <th>Brand</th>
+                        <th>Image</th> 
+                    </thead>
+                    <tbody>
+                        {cartObj &&
+                            cartObj.products.map((product,index)=>{
+                                return <tr>
+                                    <td>{product.productname}</td>
+                                    <td>{product.Brand}</td>
+                                    <td>
+                                        <img src={product.profileImage} width="60px" alt=""/> 
+                                    </td>
+                                </tr>
+                            })
+                        }
+                    </tbody>
+                </table>
+            
 
         </div>
     )

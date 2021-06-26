@@ -1,7 +1,7 @@
 import React from 'react'
 import ViewProducts from './ViewProducts'
 import ProductForm from './ProductsForm'
-import {BrowserRouter,Link,Switch,Route} from 'react-router-dom'
+import {BrowserRouter,Link,Switch,Route,Redirect} from 'react-router-dom'
 
 export default function AdminProfile(){
     return(
@@ -22,6 +22,9 @@ export default function AdminProfile(){
                     </Route>
                     <Route path="/viewproduct">
                         <ViewProducts/>
+                    </Route>
+                    <Route path="/">
+                      <Redirect to="/addproduct" />
                     </Route>
                 </Switch>
             </BrowserRouter>
