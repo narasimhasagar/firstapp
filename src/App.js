@@ -1,5 +1,5 @@
 import {BrowserRouter,Link,Switch,Route,Redirect} from 'react-router-dom'
-import Home from './components/Home'
+import HOME from './components/HOME'
 import Login from './components/Login'
 import Register from './components/Register'
 import UserProfile from './components/UserProfile'
@@ -53,7 +53,7 @@ function App() {
      {/*switch */}
      <Switch>
         <Route path="/home">
-          <Home />
+          <HOME />
         </Route>
         {/* <Route path="/products">
           <Products/>
