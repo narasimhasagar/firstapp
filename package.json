@@ -29,7 +29,6 @@
   },
   "scripts": {
     "watch": "npm-watch",
-    "serve": "nodemon server.js",
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
