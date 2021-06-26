@@ -1,6 +1,6 @@
 import {BrowserRouter,Link,Switch,Route,Redirect} from 'react-router-dom'
 import HOME from './components/HOME'
-import Login from './components/Login'
+import LOGIN from './components/LOGIN'
 import Register from './components/Register'
 import UserProfile from './components/UserProfile'
 import Test from './components/Test'
@@ -68,7 +68,7 @@ function App() {
         </Route>
 
         <Route path="/login">
-          <Login setUserStatus={setUserLoginState} />
+          <LOGIN setUserStatus={setUserLoginState} />
         </Route>
         <Route path='/userprofile/:username'>
             <UserProfile/>
