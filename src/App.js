@@ -1,7 +1,7 @@
 import {BrowserRouter,Link,Switch,Route,Redirect} from 'react-router-dom'
 import HOME from './components/HOME'
 import LOGIN from './components/LOGIN'
-import Register from './components/Register'
+import REGISTER from './components/REGISTER'
 import UserProfile from './components/UserProfile'
 import Test from './components/Test'
 //import Products from './components/Products'
@@ -64,7 +64,7 @@ function App() {
         </Route>
 
         <Route path="/register">
-          <Register />
+          <REGISTER />
         </Route>
 
         <Route path="/login">
